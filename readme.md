@@ -1,4 +1,4 @@
-# Mailin
+# Mailing
 
 WordPress plugin for managing email subscriptions and sending newsletters.
 
