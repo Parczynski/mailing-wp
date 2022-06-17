@@ -1,0 +1,46 @@
+{
+  "name": "mailing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-sass-frontend": "sass assets-src/css/style.scss build/assets/style.css --style=compressed --no-source-map",
+    "watch-sass-frontend": "sass assets-src/css/style.scss assets/style.css --watch",
+    "build-sass-dashboard": "sass assets-src/css/dashboard.scss build/assets/dashboard.css --style=compressed --no-source-map",
+    "watch-sass-dashboard": "sass assets-src/css/dashboard.scss assets/dashboard.css --watch",
+    "build-gutenberg": "wp-scripts build --config webpack.gutenberg.config.js --mode production",
+    "watch-gutenberg": "wp-scripts start --config webpack.gutenberg.config.js",
+    "build-js": "webpack --mode production",
+    "watch-js": "webpack --watch",
+    "build-php": "gulp build",
+    "build": "run-s build-php build-sass-frontend build-sass-dashboard build-gutenberg build-js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Igor Parchinski",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "devDependencies": {
+    "@wordpress/block-editor": "^9.0.0",
+    "@wordpress/blocks": "^11.7.0",
+    "@wordpress/components": "^19.10.0",
+    "@wordpress/edit-post": "^6.5.0",
+    "@wordpress/i18n": "^4.8.0",
+    "@wordpress/plugins": "^4.6.0",
+    "@wordpress/scripts": "^18.0.1",
+    "css-loader": "^6.6.0",
+    "gulp": "^4.0.2",
+    "gulp-replace": "^1.1.3",
+    "gulp-wp-pot": "^2.5.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8"
+  }
+}

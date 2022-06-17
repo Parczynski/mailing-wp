@@ -1,0 +1,41 @@
+#mailingMessageStack {
+    position:fixed;
+    bottom:2em;
+    right:2em;
+}
+.mailingMessage {
+    position:relative;
+    margin-bottom:1em;
+    $radius:.3em;
+    width: max-content;
+    max-width:100%;
+    padding:1em 10ch 1em 1em;
+    border-radius:$radius;
+    box-shadow:5px 5px 10px 0px rgb(0 0 0 / 10%);
+    background:#fff;
+    border-left-width:$radius;
+    border-left-style: solid;
+    z-index:99999999999999999;
+    transform: translate(100%, 0);
+    opacity:0;
+    transition: all .3s ease-in-out;
+
+    &.active {
+        transform: translate(0, 0);
+        opacity:1;
+    }
+
+    &.error {
+        border-left-color:#ff0000;
+    }
+
+    .close {
+        opacity:.5;
+        padding:1em;
+        position:absolute;
+        right:0;
+        top:0;
+        cursor:pointer;
+
+    }
+}

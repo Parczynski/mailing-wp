@@ -1,0 +1,98 @@
+.edit-post-header__settings .editor-post-publish-button {
+    display:none !important;
+}
+
+.mailingProgress {
+    height:2em;
+    line-height:2em;
+    background:#e0e0e0;
+    width:100%;
+    position:relative;
+
+    &-inner {
+        background:rgb(9, 143, 231);
+        color:#fff;
+        text-align:center;
+        height:100%;
+    }
+
+    &-text {
+        position:absolute;
+        inset:0;
+        text-align:center;
+        color:#fff;
+    }
+
+    &.complete &-inner {
+        background:rgb(83, 185, 15);
+    }
+}
+
+
+.email-inliner{ 
+    position:fixed;
+    left:0;
+    top:0;
+    max-width:650px;
+    z-index:999999;
+    background:#fff;
+}
+
+.mailingMetrics {
+    display:flex;
+    width:100%;
+    margin-bottom:1em;
+
+    &>div {
+        flex:1;
+        width:100%;
+        text-align:center;
+    }
+    &-value {
+        font-size:2em;
+        margin-bottom:.3em;
+    }
+}
+
+
+#mailingClassicNewsletterStatus {
+    & > * {
+        display:none;
+    }
+    .mailingResume {
+        display:none;
+    }
+    .newsletter-sent .mailingStatusHeader {
+        display:none;
+    }
+
+    &[data-status="presending"] .newsletter-presending {
+        display:block;
+    }
+    &[data-status="sending"] .newsletter-sending {
+        display:block;
+    }
+    &[data-status="sent"] {
+        .newsletter-sent {
+            display:block;
+        }
+        .newsletter-sent .mailingStatusHeader.sent {
+            display:block;
+        }
+    }
+    &[data-status="pause"] {
+        .newsletter-sent {
+            display:block;
+        }
+        .newsletter-sent .mailingStatusHeader.paused {
+            display:block;
+        }
+        .mailingResume {
+            display:block;
+        }
+    }
+    
+    .mailingStatusHeader {
+        padding:1em 0;
+    }
+}
